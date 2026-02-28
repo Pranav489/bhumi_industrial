@@ -27,6 +27,7 @@ import {
   buildMetadata,
   getBreadcrumbSchema,
   industrialServices,
+  siteSEO,
 } from "@/utils/seoConfig";
 import SeoWrapper from "@/components/SeoWrapper/SeoWrapper";
 
@@ -63,6 +64,8 @@ const midcAreas = [
   "Dindori MIDC",
   "Chakan MIDC",
   "Ranjangaon MIDC",
+  "Butibori MIDC",
+  "Hingna MIDC",
 ];
 
 export default function IndustrialPage() {
@@ -108,22 +111,21 @@ export default function IndustrialPage() {
                 11 Services
               </span>
               <span className="inline-block px-3 py-2 bg-white/10 text-white/80 rounded-full text-sm font-semibold">
-                6 MIDC Areas
+                8 MIDC Areas
               </span>
             </div>
 
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 max-w-4xl leading-tight">
               MIDC Industrial Services in{" "}
-              <span className="text-[#f97316]">Nashik</span>
+              <span className="text-[#f97316]">Maharashtra</span>
             </h1>
 
             <p className="text-xl text-[#d9e6f2] max-w-3xl mb-8">
               Complete MIDC services from NOC to water connection. 26+ years
               experience.{" "}
               <span className="text-[#f97316] font-semibold">
-                Ambad · Satpur · Sinnar
-              </span>{" "}
-              · Pune · Chakan.
+                Nashik · Mumbai · Pune · Nagpur
+              </span>
             </p>
 
             {/* MIDC Area Pills */}
@@ -146,12 +148,20 @@ export default function IndustrialPage() {
                 <Phone className="w-4 h-4" /> Free Consultation
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <a
-                href="tel:+919822242170"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold transition-colors border border-white/20"
-              >
-                <Phone className="w-4 h-4" /> +91 9822242170
-              </a>
+              <div className="flex gap-2">
+                <a
+                  href="tel:+919096099960"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold transition-colors border border-white/20"
+                >
+                  <Phone className="w-4 h-4" /> +91 90960 99960
+                </a>
+                <a
+                  href="tel:+919822372070"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold transition-colors border border-white/20"
+                >
+                  <Phone className="w-4 h-4" /> +91 98223 72070
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -208,7 +218,7 @@ export default function IndustrialPage() {
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Comprehensive industrial consulting services for manufacturers
-                in Nashik, Pune and Chakan MIDC areas
+                across Maharashtra's major MIDC areas
               </p>
             </div>
 
@@ -234,7 +244,7 @@ export default function IndustrialPage() {
                         Learn More <ArrowRight className="w-4 h-4" />
                       </span>
                       <span className="text-xs text-gray-400">
-                        MIDC • Nashik
+                        MIDC • Maharashtra
                       </span>
                     </div>
                   </Link>
@@ -253,7 +263,7 @@ export default function IndustrialPage() {
                   Why Bhumi Industrial
                 </span>
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                  Your Trusted MIDC Partner Since 1997
+                  Your Trusted MIDC Partner Since 1999
                 </h2>
                 <div className="space-y-4">
                   {whyChoose.map((item, i) => (
@@ -316,9 +326,9 @@ export default function IndustrialPage() {
         <section className="py-16 bg-white">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">
-              MIDC Areas We Serve in Nashik Region
+              MIDC Areas We Serve Across Maharashtra
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {midcAreas.map((area, i) => (
                 <div
                   key={i}
@@ -334,6 +344,37 @@ export default function IndustrialPage() {
           </div>
         </section>
 
+        {/* Contact Information Bar */}
+        <section className="bg-gradient-to-r from-[#f97316]/10 to-[#fff7ed] py-6 border-y border-[#ffedd5]">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap items-center justify-center gap-6">
+              <span className="text-sm font-semibold text-gray-700">24/7 Support:</span>
+              <a
+                href="tel:+919096099960"
+                className="flex items-center gap-2 text-[#f97316] hover:text-[#ea580c] transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                <span className="font-bold">+91 90960 99960</span>
+              </a>
+              <span className="text-gray-300">|</span>
+              <a
+                href="tel:+919822372070"
+                className="flex items-center gap-2 text-[#f97316] hover:text-[#ea580c] transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                <span className="font-bold">+91 98223 72070</span>
+              </a>
+              <span className="text-gray-300">|</span>
+              <a
+                href="mailto:info@bhumiindustrial.com"
+                className="flex items-center gap-2 text-[#f97316] hover:text-[#ea580c] transition-colors"
+              >
+                info@bhumiindustrial.com
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* ── CTA ──────────────────────────────────────────────── */}
         <section className="py-20 bg-gradient-to-r from-[#f97316] to-[#ea580c]">
           <div className="max-w-[1440px] mx-auto px-4 text-center">
@@ -345,13 +386,21 @@ export default function IndustrialPage() {
               appointments — call directly for your MIDC requirements.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a
-                href="tel:+919822242170"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#ea580c] rounded-xl font-bold hover:bg-[#fff7ed] transition-colors shadow-xl group"
-              >
-                <Phone className="w-5 h-5" /> +91 9822242170
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="tel:+919096099960"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#ea580c] rounded-xl font-bold hover:bg-[#fff7ed] transition-colors shadow-xl group"
+                >
+                  <Phone className="w-5 h-5" /> +91 90960 99960
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a
+                  href="tel:+919822372070"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/20 text-white rounded-xl font-bold hover:bg-white/30 transition-colors border border-white/50"
+                >
+                  <Phone className="w-5 h-5" /> +91 98223 72070
+                </a>
+              </div>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white rounded-xl font-bold hover:bg-white/10 transition-colors"
@@ -359,6 +408,9 @@ export default function IndustrialPage() {
                 Send Enquiry <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
+            <p className="text-white/70 text-sm mt-6">
+              Response within 2 hours | Offices in Nashik, Mumbai, Pune & Nagpur
+            </p>
           </div>
         </section>
       </main>

@@ -21,6 +21,8 @@ import {
 } from "lucide-react";
 import { buildMetadata, getBreadcrumbSchema, siteSEO } from "@/utils/seoConfig";
 import SeoWrapper from "@/components/SeoWrapper/SeoWrapper";
+import { founderImage } from "@/assets";
+
 
 export const metadata = buildMetadata("about");
 export const dynamic = "force-static";
@@ -87,6 +89,7 @@ const team = [
     role: "Founder & Lead Consultant",
     qualification: "FI-ACC",
     experience: "26+ Years",
+    image: founderImage, // Add founder image here
     initial: "M",
   },
   {
@@ -186,10 +189,10 @@ export default function AboutPage() {
                 <Phone className="w-4 h-4" /> Free Consultation
               </Link>
               <a
-                href="tel:+919822242170"
+                href="tel:+919096099960"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold transition-colors border border-white/20"
               >
-                +91 9822242170
+                +91 90960 99960
               </a>
             </div>
           </div>
@@ -307,73 +310,103 @@ export default function AboutPage() {
                 Meet Milind Rajhans
               </h2>
             </div>
-            <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+            <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
               <div className="grid md:grid-cols-2">
-                <div className="bg-gradient-to-br from-[#001a33] to-[#003366] p-10 text-white flex flex-col justify-center">
-                  <div className="w-24 h-24 rounded-full bg-[#f97316] flex items-center justify-center text-4xl font-bold mb-6">
-                    M
+                {/* Founder Image Section */}
+                <div className="relative h-full min-h-[400px] bg-gradient-to-br from-[#001a33] to-[#003366] overflow-hidden">
+                  <Image
+                    src={founderImage}
+                    alt="Milind Rajhans - Founder of Bhumi Industrial Consultant"
+                    fill
+                    className="object-cover object-center hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
+                    style={{ objectFit: 'cover' }}
+                  />
+                  {/* Overlay with name and title */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#001a33] to-transparent p-8">
+                    <h3 className="text-3xl font-bold text-white mb-2">Milind Rajhans</h3>
+                    <p className="text-[#f97316] font-bold text-lg">FI-ACC</p>
+                    <p className="text-white/80">Founder & Lead Consultant</p>
                   </div>
-                  <h3 className="text-3xl font-bold mb-2">Milind Rajhans</h3>
-                  <p className="text-[#f97316] font-bold text-lg mb-1">
-                    FI-ACC
-                  </p>
-                  <p className="text-white/70 text-sm mb-6">
-                    Founder & Lead Consultant
-                  </p>
-                  <div className="space-y-3">
+                </div>
+                
+                {/* Founder Details Section */}
+                <div className="p-10">
+                  <div className="mb-6">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Award className="w-5 h-5 text-[#f97316]" />
+                      <span className="text-sm font-semibold text-gray-500">26+ YEARS EXPERIENCE</span>
+                    </div>
+                    <p className="text-gray-700 mb-4 leading-relaxed">
+                      With over 26 years of hands-on experience, Milind Rajhans
+                      has been instrumental in shaping the industrial landscape of
+                      Nashik, Pune, and Chakan. His deep expertise in MIDC
+                      regulations and project finance has helped 500+ businesses
+                      establish and expand successfully.
+                    </p>
+                    <p className="text-gray-700 mb-6 leading-relaxed">
+                      As an FI-ACC (Financial Intermediary Accredited Consultant),
+                      he brings unmatched credibility to every engagement — from
+                      securing the largest MIDC plots in Maharashtra to arranging
+                      complex project finance structures for industrial units.
+                    </p>
+                  </div>
+
+                  {/* Key Stats */}
+                  <div className="grid grid-cols-2 gap-4 mb-6">
                     {[
-                      ["Experience", "26+ Years"],
-                      ["Specialization", "MIDC & Project Finance"],
-                      ["Clients Served", "500+"],
-                      ["Projects", "1000+"],
-                    ].map(([k, v], i) => (
-                      <div
-                        key={i}
-                        className="flex justify-between text-sm border-b border-white/10 pb-2"
-                      >
-                        <span className="text-white/60">{k}</span>
-                        <span className="font-semibold">{v}</span>
+                      { label: "Projects", value: "1000+" },
+                      { label: "Clients", value: "500+" },
+                      { label: "MIDC Areas", value: "25+" },
+                      { label: "Finance", value: "₹500Cr+" },
+                    ].map((stat, i) => (
+                      <div key={i} className="bg-[#fff7ed] p-3 rounded-xl text-center">
+                        <div className="text-xl font-bold text-[#f97316]">{stat.value}</div>
+                        <div className="text-xs text-gray-600">{stat.label}</div>
                       </div>
                     ))}
                   </div>
-                </div>
-                <div className="p-10">
-                  <p className="text-gray-700 mb-4 leading-relaxed">
-                    With over 26 years of hands-on experience, Milind Rajhans
-                    has been instrumental in shaping the industrial landscape of
-                    Nashik, Pune, and Chakan. His deep expertise in MIDC
-                    regulations and project finance has helped 500+ businesses
-                    establish and expand successfully.
-                  </p>
-                  <p className="text-gray-700 mb-6 leading-relaxed">
-                    As an FI-ACC (Financial Intermediary Accredited Consultant),
-                    he brings unmatched credibility to every engagement — from
-                    securing the largest MIDC plots in Maharashtra to arranging
-                    complex project finance structures for industrial units.
-                  </p>
-                  <div className="grid grid-cols-2 gap-3">
-                    {[
-                      "MIDC Expert",
-                      "Project Finance",
-                      "Term Loans",
-                      "MSME Advisory",
-                      "Due Diligence",
-                      "SARFAESI Deals",
-                    ].map((tag, i) => (
-                      <span
-                        key={i}
-                        className="text-xs bg-[#fff7ed] text-[#ea580c] border border-[#ffedd5] rounded-lg px-3 py-2 font-medium text-center"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+
+                  {/* Expertise Tags */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-700 mb-3">Areas of Expertise:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        "MIDC Expert",
+                        "Project Finance",
+                        "Term Loans",
+                        "MSME Advisory",
+                        "Due Diligence",
+                        "SARFAESI Deals",
+                        "Industrial Planning",
+                        "Bank Liaison",
+                      ].map((tag, i) => (
+                        <span
+                          key={i}
+                          className="text-xs bg-[#fff7ed] text-[#ea580c] border border-[#ffedd5] rounded-lg px-3 py-2 font-medium"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <a
-                    href="tel:+919822242170"
-                    className="mt-6 flex items-center gap-2 px-6 py-3 bg-[#f97316] text-white rounded-xl font-bold hover:bg-[#ea580c] transition-colors"
-                  >
-                    <Phone className="w-4 h-4" /> Call Milind Rajhans
-                  </a>
+
+                  {/* Contact Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href="tel:+919096099960"
+                      className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-[#f97316] text-white rounded-xl font-bold hover:bg-[#ea580c] transition-colors"
+                    >
+                      <Phone className="w-4 h-4" /> Call Milind Rajhans
+                    </a>
+                    <Link
+                      href="/contact"
+                      className="flex-1 flex items-center justify-center gap-2 px-6 py-3 border-2 border-[#f97316] text-[#f97316] rounded-xl font-bold hover:bg-[#f97316] hover:text-white transition-colors"
+                    >
+                      Schedule Meeting
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -401,9 +434,9 @@ export default function AboutPage() {
                   key={i}
                   className="group bg-gradient-to-br from-white to-[#fff7ed] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 text-center border border-[#ffedd5]/50"
                 >
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#f97316] to-[#ea580c] flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    {member.initial}
-                  </div>
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#f97316] to-[#ea580c] flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
+                      {member.initial}
+                    </div>
                   <h3 className="font-bold text-gray-900 text-lg mb-1">
                     {member.name}
                   </h3>
@@ -518,10 +551,10 @@ export default function AboutPage() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href="tel:+919822242170"
+                href="tel:+919096099960"
                 className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white rounded-xl font-bold hover:bg-white/10 transition-colors"
               >
-                <Phone className="w-5 h-5" /> +91 9822242170
+                <Phone className="w-5 h-5" /> +91 90960 99960
               </a>
             </div>
           </div>

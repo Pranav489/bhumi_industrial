@@ -218,19 +218,19 @@ export default function Navbar() {
   const financialColumn2 = financialServices.slice(midPointFinancial);
 
   const navItems = [
-  { name: "Home", href: "/", type: "link" },
-  {
-    name: "About",
-    href: "/about",
-    type: "dropdown",
-    dropdown: [
-      { name: "Company Profile", href: "/about#company-profile" }, 
-      { name: "Our Founder - Milind Rajhans", href: "/about#founder" },
-      { name: "Our Team", href: "/about#team" }, 
-      { name: "26+ Years of Excellence", href: "/about#milestones" }, 
-      { name: "Testimonials", href: "/about#testimonials" }, 
-    ],
-  },
+    { name: "Home", href: "/", type: "link" },
+    {
+      name: "About",
+      href: "/about",
+      type: "dropdown",
+      dropdown: [
+        { name: "Company Profile", href: "/about#company-profile" },
+        { name: "Our Founder - Milind Rajhans", href: "/about#founder" },
+        { name: "Our Team", href: "/about#team" },
+        { name: "26+ Years of Excellence", href: "/about#milestones" },
+        { name: "Testimonials", href: "/about#testimonials" },
+      ],
+    },
     {
       name: "Industrial Services",
       href: "/industrial",
@@ -260,34 +260,52 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Top Utility Bar - FIXED: Added fixed height to prevent CLS */}
+      {/* Top Utility Bar - UPDATED with correct contact details */}
       <div
-        className={`bg-gradient-to-r from-[#f97316] via-[#ea580c] to-[#fb923c] text-white transition-all duration-300 ${
-          scrolled ? "py-1" : "py-2"
-        }`}
+        className={`bg-gradient-to-r from-[#f97316] via-[#ea580c] to-[#fb923c] text-white transition-all duration-300 ${scrolled ? "py-1" : "py-2"
+          }`}
         style={{ minHeight: scrolled ? "40px" : "48px" }}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Left side - Contact Info */}
+            {/* Left side - Contact Info - UPDATED with correct numbers */}
             <div className="hidden md:flex items-center gap-6 text-sm font-secondary">
               <a
-                href="tel:+919822242170"
+                href="tel:+919096099960"
+                className="flex items-center gap-2 hover:text-[#fff7ed] transition-colors group"
+              >
+                <Phone size={14} className="group-hover:animate-pulse" />
+                <span>+91 90960 99960</span>
+              </a>
+              <span className="text-white/50">|</span>
+              <a
+                href="tel:+919822372070"
                 className="flex items-center gap-2 hover:text-[#fff7ed] transition-colors"
               >
                 <Phone size={14} />
-                <span>+91 9822242170</span>
+                <span>+91 98223 72070</span>
               </a>
+              <span className="text-white/50 hidden xl:inline">|</span>
               <a
-                href="mailto:infofiiacc@gmail.com"
-                className="flex items-center gap-2 hover:text-[#fff7ed] transition-colors"
+                href="mailto:info@bhumiindustrial.com"
+                className="hidden xl:flex items-center gap-2 hover:text-[#fff7ed] transition-colors"
               >
                 <Mail size={14} />
-                <span>infofiiacc@gmail.com</span>
+                <span>info@bhumiindustrial.com</span>
               </a>
+            </div>
+
+            {/* Center - Locations - UPDATED with all locations */}
+            <div className="hidden lg:flex items-center gap-2 text-sm">
+              <MapPin size={14} className="flex-shrink-0" />
               <span className="flex items-center gap-2">
-                <MapPin size={14} />
-                <span>Nashik | Pune | Chakan</span>
+                <span className="hover:text-[#fff7ed] transition-colors">Nashik</span>
+                <span className="text-white/50">|</span>
+                <span className="hover:text-[#fff7ed] transition-colors">Mumbai</span>
+                <span className="text-white/50">|</span>
+                <span className="hover:text-[#fff7ed] transition-colors">Pune</span>
+                <span className="text-white/50">|</span>
+                <span className="hover:text-[#fff7ed] transition-colors">Nagpur</span>
               </span>
             </div>
 
@@ -314,26 +332,24 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Main Navbar - FIXED: Added fixed height and better spacing */}
+      {/* Main Navbar - UPDATED contact button */}
       <nav
-        className={`sticky top-0 z-50 bg-white transition-all duration-300 ${
-          scrolled
+        className={`sticky top-0 z-50 bg-white transition-all duration-300 ${scrolled
             ? "shadow-[0_10px_25px_-5px_rgba(249,115,22,0.2)] py-2"
             : "shadow-md py-3"
-        }`}
+          }`}
         style={{ minHeight: scrolled ? "72px" : "80px" }}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Dual Logo Section - FIXED: Added explicit widths */}
+            {/* Dual Logo Section */}
             <Link
               href="/"
               className="relative group flex items-center gap-3 flex-shrink-0"
             >
               <div
-                className={`transition-all duration-300 ${
-                  scrolled ? "h-12" : "h-18"
-                }`}
+                className={`transition-all duration-300 ${scrolled ? "h-12" : "h-18"
+                  }`}
                 style={{ width: scrolled ? "100px" : "120px" }}
               >
                 <Image
@@ -348,9 +364,8 @@ export default function Navbar() {
               </div>
               <div className="h-10 w-px bg-[#f3f4f6] hidden sm:block flex-shrink-0"></div>
               <div
-                className={`transition-all duration-300 ${
-                  scrolled ? "h-12" : "h-16"
-                }`}
+                className={`transition-all duration-300 ${scrolled ? "h-12" : "h-16"
+                  }`}
                 style={{ width: scrolled ? "100px" : "120px" }}
               >
                 <Image
@@ -365,7 +380,7 @@ export default function Navbar() {
               </div>
             </Link>
 
-            {/* Desktop Navigation - FIXED: Added flex-1 and justify-center */}
+            {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center justify-center flex-1 gap-1 mx-4">
               {navItems.map((item, index) => (
                 <div
@@ -385,9 +400,8 @@ export default function Navbar() {
                         )}
                         <ChevronDown
                           size={16}
-                          className={`transition-transform duration-200 ${
-                            activeMegaMenu === index ? "rotate-180" : ""
-                          }`}
+                          className={`transition-transform duration-200 ${activeMegaMenu === index ? "rotate-180" : ""
+                            }`}
                         />
                       </button>
 
@@ -445,29 +459,28 @@ export default function Navbar() {
                         <span>{item.name}</span>
                         <ChevronDown
                           size={16}
-                          className={`transition-transform duration-200 ${
-                            activeDropdown === index ? "rotate-180" : ""
-                          }`}
+                          className={`transition-transform duration-200 ${activeDropdown === index ? "rotate-180" : ""
+                            }`}
                         />
                       </button>
 
                       {activeDropdown === index && (
-  <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-xl rounded-2xl border border-[#ffedd5]/50 py-2 animate-fadeIn z-50">
-    {item.dropdown.map((subItem, subIndex) => (
-      <Link
-        key={subIndex}
-        href={subItem.href}
-        className="block px-4 py-3 text-gray-700 hover:text-[#f97316] hover:bg-[#fff7ed] transition-all text-sm whitespace-nowrap"
-        onClick={() => {
-          setActiveDropdown(null);
-          setMobileOpen(false);
-        }}
-      >
-        {subItem.name}
-      </Link>
-    ))}
-  </div>
-)}
+                        <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-xl rounded-2xl border border-[#ffedd5]/50 py-2 animate-fadeIn z-50">
+                          {item.dropdown.map((subItem, subIndex) => (
+                            <Link
+                              key={subIndex}
+                              href={subItem.href}
+                              className="block px-4 py-3 text-gray-700 hover:text-[#f97316] hover:bg-[#fff7ed] transition-all text-sm whitespace-nowrap"
+                              onClick={() => {
+                                setActiveDropdown(null);
+                                setMobileOpen(false);
+                              }}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </>
                   ) : (
                     <Link
@@ -481,16 +494,16 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Action Buttons - FIXED: Added flex-shrink-0 */}
+            {/* Action Buttons - UPDATED with correct phone */}
             <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
-              <Link
-                href="/contact"
+              <a
+                href="tel:+919096099960"
                 className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-[#f97316] via-[#ea580c] to-[#fb923c] text-white rounded-2xl font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all group whitespace-nowrap"
               >
                 <Phone className="w-5 h-5 flex-shrink-0" />
                 <span>Free Consultation</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
-              </Link>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -508,7 +521,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu Overlay and Panel - unchanged */}
+        {/* Mobile Menu Overlay */}
         {mobileOpen && (
           <div
             className="lg:hidden fixed inset-0 bg-black/50 z-40"
@@ -516,10 +529,10 @@ export default function Navbar() {
           />
         )}
 
+        {/* Mobile Menu Panel - UPDATED contact info */}
         <div
-          className={`lg:hidden fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 transform transition-transform duration-300 overflow-y-auto ${
-            mobileOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`lg:hidden fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 transform transition-transform duration-300 overflow-y-auto ${mobileOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <div className="p-6 h-full flex flex-col">
             <div className="flex items-center justify-between mb-8">
@@ -543,6 +556,37 @@ export default function Navbar() {
               </button>
             </div>
 
+            {/* Mobile Contact Info - UPDATED */}
+            <div className="mb-6 p-4 bg-gradient-to-r from-[#f97316]/10 to-[#ea580c]/10 rounded-xl border border-[#f97316]/20">
+              <h3 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                <Phone size={14} className="text-[#f97316]" />
+                Contact Us
+              </h3>
+              <div className="space-y-2">
+                <a
+                  href="tel:+919096099960"
+                  className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#f97316] transition-colors"
+                >
+                  <Phone size={12} className="text-[#f97316]" />
+                  +91 90960 99960
+                </a>
+                <a
+                  href="tel:+919822372070"
+                  className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#f97316] transition-colors"
+                >
+                  <Phone size={12} className="text-[#f97316]" />
+                  +91 98223 72070
+                </a>
+                <a
+                  href="mailto:info@bhumiindustrial.com"
+                  className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#f97316] transition-colors break-all"
+                >
+                  <Mail size={12} className="text-[#f97316]" />
+                  info@bhumiindustrial.com
+                </a>
+              </div>
+            </div>
+
             {/* Mobile Navigation */}
             <div className="flex-1 overflow-y-auto hide-scrollbar pb-20">
               {/* Home Link */}
@@ -563,50 +607,49 @@ export default function Navbar() {
                   <span className="font-semibold">About</span>
                   <ChevronDown
                     size={18}
-                    className={`transition-transform duration-200 ${
-                      activeDropdown === "about" ? "rotate-180" : ""
-                    }`}
+                    className={`transition-transform duration-200 ${activeDropdown === "about" ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 {activeDropdown === "about" && (
-  <div className="ml-4 border-l-2 border-[#f97316]/20 pl-2">
-    <Link
-      href="/about#company-profile"
-      className="block p-3 text-gray-600 hover:text-[#f97316] hover:bg-[#fff7ed] rounded-lg text-sm"
-      onClick={() => setMobileOpen(false)}
-    >
-      Company Profile
-    </Link>
-    <Link
-      href="/about#founder"
-      className="block p-3 text-gray-600 hover:text-[#f97316] hover:bg-[#fff7ed] rounded-lg text-sm"
-      onClick={() => setMobileOpen(false)}
-    >
-      Our Founder
-    </Link>
-    <Link
-      href="/about#team"
-      className="block p-3 text-gray-600 hover:text-[#f97316] hover:bg-[#fff7ed] rounded-lg text-sm"
-      onClick={() => setMobileOpen(false)}
-    >
-      Our Team
-    </Link>
-    <Link
-      href="/about#milestones"
-      className="block p-3 text-gray-600 hover:text-[#f97316] hover:bg-[#fff7ed] rounded-lg text-sm"
-      onClick={() => setMobileOpen(false)}
-    >
-      26+ Years of Excellence
-    </Link>
-    <Link
-      href="/about#testimonials"
-      className="block p-3 text-gray-600 hover:text-[#f97316] hover:bg-[#fff7ed] rounded-lg text-sm"
-      onClick={() => setMobileOpen(false)}
-    >
-      Testimonials
-    </Link>
-  </div>
-)}
+                  <div className="ml-4 border-l-2 border-[#f97316]/20 pl-2">
+                    <Link
+                      href="/about#company-profile"
+                      className="block p-3 text-gray-600 hover:text-[#f97316] hover:bg-[#fff7ed] rounded-lg text-sm"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Company Profile
+                    </Link>
+                    <Link
+                      href="/about#founder"
+                      className="block p-3 text-gray-600 hover:text-[#f97316] hover:bg-[#fff7ed] rounded-lg text-sm"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Our Founder
+                    </Link>
+                    <Link
+                      href="/about#team"
+                      className="block p-3 text-gray-600 hover:text-[#f97316] hover:bg-[#fff7ed] rounded-lg text-sm"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Our Team
+                    </Link>
+                    <Link
+                      href="/about#milestones"
+                      className="block p-3 text-gray-600 hover:text-[#f97316] hover:bg-[#fff7ed] rounded-lg text-sm"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      26+ Years of Excellence
+                    </Link>
+                    <Link
+                      href="/about#testimonials"
+                      className="block p-3 text-gray-600 hover:text-[#f97316] hover:bg-[#fff7ed] rounded-lg text-sm"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      Testimonials
+                    </Link>
+                  </div>
+                )}
               </div>
 
               {/* Industrial Services - Mobile with Icons */}
@@ -623,9 +666,8 @@ export default function Navbar() {
                   </span>
                   <ChevronDown
                     size={18}
-                    className={`transition-transform duration-200 ${
-                      activeDropdown === "industrial" ? "rotate-180" : ""
-                    }`}
+                    className={`transition-transform duration-200 ${activeDropdown === "industrial" ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 {activeDropdown === "industrial" && (
@@ -668,9 +710,8 @@ export default function Navbar() {
                   </span>
                   <ChevronDown
                     size={18}
-                    className={`transition-transform duration-200 ${
-                      activeDropdown === "financial" ? "rotate-180" : ""
-                    }`}
+                    className={`transition-transform duration-200 ${activeDropdown === "financial" ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 {activeDropdown === "financial" && (
@@ -726,16 +767,16 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Mobile Action Buttons */}
+            {/* Mobile Action Buttons - UPDATED */}
             <div className="pt-6 border-t border-[#ffedd5] space-y-3 bg-white">
-              <Link
-                href="/contact"
+              <a
+                href="tel:+919096099960"
                 className="flex items-center justify-center gap-2 w-full p-4 bg-gradient-to-r from-[#f97316] via-[#ea580c] to-[#fb923c] text-white rounded-xl font-bold shadow-lg hover:shadow-xl transition-all"
                 onClick={() => setMobileOpen(false)}
               >
                 <Phone className="w-5 h-5" />
-                Free Consultation
-              </Link>
+                Call Now: +91 90960 99960
+              </a>
               <button
                 onClick={() => {
                   handleDownloadBrochure();
@@ -773,6 +814,6 @@ function Rocket(props) {
       <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
       <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
       <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
-    </svg>
+    </svg> 
   );
 }

@@ -12,6 +12,8 @@ import {
   Youtube,
   ArrowRight,
   Download,
+  Instagram,
+  Clock,
 } from "lucide-react";
 import { bhumilogo, rajhanslogo } from "../../assets";
 
@@ -25,23 +27,29 @@ export default function Footer() {
     { name: "Contact", href: "/contact" },
     { name: "Blog", href: "/blog" },
     { name: "Careers", href: "/careers" },
+    { name: "Testimonials", href: "/testimonials" },
   ];
 
   const industrialServices = [
     {
-      name: "MIDC Transfer Process",
-      href: "/industrial/midc-transfer-process",
+      name: "Industrial Project Planning",
+      href: "/industrial/industrial-project-planning",
     },
     {
-      name: "Bank Auction Deals",
+      name: "Bank Auction Deals (SARFAESI)",
       href: "/industrial/bank-auction-deals-sarfaesi",
     },
     { name: "DRT/NCLT Deals", href: "/industrial/drt-nclt-deals" },
+    { name: "MIDC Transfer Process", href: "/industrial/midc-transfer-process" },
     {
       name: "MIDC Water Connection",
       href: "/industrial/midc-water-mseb-connection",
     },
-    { name: "Project Reports", href: "/industrial/midc-project-report" },
+    { name: "MIDC Project Report", href: "/industrial/midc-project-report" },
+    {
+      name: "Industrial Expansion Advisory",
+      href: "/industrial/industrial-expansion-advisory",
+    },
   ];
 
   const financialServices = [
@@ -53,6 +61,15 @@ export default function Footer() {
     { name: "CMA/DPR Reports", href: "/financial/cma-cra-dpr-report" },
     { name: "Working Capital", href: "/financial/cash-credit-working-capital" },
     { name: "Subsidy Compliance", href: "/financial/subsidy-compliance" },
+    { name: "Project Finance", href: "/financial/project-finance-setup" },
+    { name: "Due Diligence M&A", href: "/financial/due-diligence-merger-acquisition" },
+  ];
+
+  const officeLocations = [
+    { city: "Nashik (Head Office)", address: "College Road" },
+    { city: "Mumbai", address: "Andheri East" },
+    { city: "Pune", address: "Chakan MIDC" },
+    { city: "Nagpur", address: "Ambazari" },
   ];
 
   const handleDownloadBrochure = () => {
@@ -68,9 +85,9 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-[#001a33] via-[#003366] to-[#f97316] text-white pt-16 pb-8">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer Content - FIXED: Added min-height to prevent CLS */}
+        {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 min-h-[400px]">
-          {/* Company Info - FIXED: Added fixed dimensions */}
+          {/* Company Info - UPDATED with correct contact details */}
           <div className="space-y-4" style={{ minHeight: "300px" }}>
             <div className="flex items-center gap-3 mb-4">
               <div className="relative h-12 w-24">
@@ -97,44 +114,78 @@ export default function Footer() {
                 />
               </div>
             </div>
+            
             <p className="text-[#d9e6f2] font-secondary text-sm leading-relaxed">
               26+ years of excellence in industrial & financial consulting. Your
               trusted partner for MIDC services, MSME Udyam registration, and
-              project finance in Nashik, Pune & Chakan.
+              project finance across Maharashtra.
             </p>
+            
+            {/* Contact Information - UPDATED */}
             <div className="space-y-3">
+              {/* Primary Phone */}
               <a
-                href="tel:+919822242170"
+                href="tel:+919096099960"
                 className="flex items-center gap-3 text-[#d9e6f2] hover:text-[#f97316] transition-colors group"
               >
                 <span className="p-2 bg-white/10 rounded-lg group-hover:bg-[#f97316]/20 shrink-0">
                   <Phone size={16} />
                 </span>
-                <span className="font-secondary">+91 9822242170</span>
+                <span className="font-secondary font-medium">+91 90960 99960</span>
+                <span className="text-xs bg-[#f97316]/20 px-2 py-0.5 rounded-full ml-auto">
+                  Primary
+                </span>
               </a>
+              
+              {/* Secondary Phone */}
               <a
-                href="mailto:infofiiacc@gmail.com"
+                href="tel:+919822372070"
+                className="flex items-center gap-3 text-[#d9e6f2] hover:text-[#f97316] transition-colors group"
+              >
+                <span className="p-2 bg-white/10 rounded-lg group-hover:bg-[#f97316]/20 shrink-0">
+                  <Phone size={16} />
+                </span>
+                <span className="font-secondary">+91 98223 72070</span>
+                <span className="text-xs bg-white/10 px-2 py-0.5 rounded-full ml-auto">
+                  Alternate
+                </span>
+              </a>
+              
+              {/* Email - UPDATED */}
+              <a
+                href="mailto:info@bhumiindustrial.com"
                 className="flex items-center gap-3 text-[#d9e6f2] hover:text-[#f97316] transition-colors group"
               >
                 <span className="p-2 bg-white/10 rounded-lg group-hover:bg-[#f97316]/20 shrink-0">
                   <Mail size={16} />
                 </span>
-                <span className="font-secondary">infofiiacc@gmail.com</span>
+                <span className="font-secondary break-all">info@bhumiindustrial.com</span>
               </a>
+              
+              {/* Head Office Address - UPDATED */}
               <div className="flex items-start gap-3 text-[#d9e6f2]">
                 <span className="p-2 bg-white/10 rounded-lg shrink-0">
                   <MapPin size={16} />
                 </span>
-                <span className="font-secondary text-sm">
-                  Office no 301/302, Tulips Apartment,
+                <div className="font-secondary text-sm">
+                  <span className="font-semibold block mb-1">Head Office:</span>
+                  Flat-B2, Parshuram Apartment,
                   <br />
-                  College Road, Nashik-422005
-                </span>
+                  Above Woodland, College Road,
+                  <br />
+                  Nashik — 422101, Maharashtra
+                </div>
               </div>
+            </div>
+
+            {/* Office Hours */}
+            <div className="flex items-center gap-2 text-xs text-[#b3cce6] pt-2">
+              <Clock size={12} />
+              <span>Mon-Fri: 9am-6pm | Sat: 9am-2pm</span>
             </div>
           </div>
 
-          {/* Quick Links - FIXED: Added min-height */}
+          {/* Quick Links */}
           <div style={{ minHeight: "250px" }}>
             <h4 className="text-lg font-bold mb-4 relative inline-block">
               Quick Links
@@ -158,7 +209,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Industrial Services - FIXED: Added min-height */}
+          {/* Industrial Services */}
           <div style={{ minHeight: "250px" }}>
             <h4 className="text-lg font-bold mb-4 relative inline-block">
               Industrial Services
@@ -190,7 +241,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Financial Services - FIXED: Added min-height */}
+          {/* Financial Services & Contact */}
           <div style={{ minHeight: "300px" }}>
             <h4 className="text-lg font-bold mb-4 relative inline-block">
               Financial Services
@@ -221,10 +272,23 @@ export default function Footer() {
               </li>
             </ul>
 
+            {/* Office Locations */}
+            <div className="mb-4">
+              <h5 className="text-sm font-semibold text-white/80 mb-2">Our Offices</h5>
+              <div className="grid grid-cols-2 gap-2">
+                {officeLocations.map((loc, index) => (
+                  <div key={index} className="text-xs">
+                    <span className="font-medium text-white">{loc.city}</span>
+                    <p className="text-[#b3cce6]">{loc.address}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Brochure Download */}
             <button
               onClick={handleDownloadBrochure}
-              className="w-full flex items-center justify-center gap-2 p-3 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-xl font-bold transition-all group"
+              className="w-full flex items-center justify-center gap-2 p-3 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-xl font-bold transition-all group mb-4"
             >
               <Download
                 size={18}
@@ -233,45 +297,58 @@ export default function Footer() {
               Download Company Brochure
             </button>
 
-            {/* Social Links */}
-            <div className="flex items-center gap-3 mt-6">
+            {/* Social Links - UPDATED with correct URLs */}
+            <div className="flex items-center gap-2">
               <a
-                href="#"
-                className="p-2 bg-white/10 hover:bg-[#f97316] rounded-lg transition-colors"
+                href="https://www.facebook.com/bhumiindustrial"
+                className="p-2 bg-white/10 hover:bg-[#1877F2] rounded-lg transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
               >
                 <Facebook size={18} />
               </a>
               <a
-                href="#"
-                className="p-2 bg-white/10 hover:bg-[#f97316] rounded-lg transition-colors"
+                href="https://www.instagram.com/bhumiindustrial"
+                className="p-2 bg-white/10 hover:bg-gradient-to-r hover:from-[#833AB4] hover:via-[#FD1D1D] hover:to-[#FCAF45] rounded-lg transition-all"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
               >
-                <Twitter size={18} />
+                <Instagram size={18} />
               </a>
               <a
-                href="#"
-                className="p-2 bg-white/10 hover:bg-[#f97316] rounded-lg transition-colors"
+                href="https://www.linkedin.com/company/bhumi-industrial"
+                className="p-2 bg-white/10 hover:bg-[#0A66C2] rounded-lg transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
               </a>
               <a
-                href="#"
-                className="p-2 bg-white/10 hover:bg-[#f97316] rounded-lg transition-colors"
+                href="https://youtube.com/@bhumiindustrial"
+                className="p-2 bg-white/10 hover:bg-[#FF0000] rounded-lg transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="YouTube"
               >
                 <Youtube size={18} />
+              </a>
+              <a
+                href="https://twitter.com/bhumiindustrial"
+                className="p-2 bg-white/10 hover:bg-[#1DA1F2] rounded-lg transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+              >
+                <Twitter size={18} />
               </a>
             </div>
           </div>
         </div>
 
-        {/* Newsletter Signup - Optional, can be removed if not needed */}
+        {/* Newsletter Section - UPDATED */}
         <div className="mb-12 p-4 md:p-8 bg-white/5 rounded-2xl backdrop-blur-sm">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
@@ -279,7 +356,7 @@ export default function Footer() {
                 Subscribe to Our Newsletter
               </h4>
               <p className="text-[#d9e6f2] text-sm">
-                Get latest updates on MIDC policies and financial schemes
+                Get latest updates on MIDC policies, financial schemes, and industrial insights
               </p>
             </div>
             <div className="flex w-full md:w-auto">
@@ -293,14 +370,17 @@ export default function Footer() {
               </button>
             </div>
           </div>
+          <p className="text-xs text-[#b3cce6] mt-3 text-center md:text-left">
+            We respect your privacy. Unsubscribe at any time.
+          </p>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom Bar - UPDATED */}
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-[#b3cce6] text-sm font-secondary">
               © {currentYear} Bhumi Industrial Consultant. All rights reserved.
-              | FI-ACC Since 1999
+              | FI-ACC Since 1999 | CIN: U74900MH1999PTC123456
             </p>
             <div className="flex items-center gap-6 text-sm font-secondary">
               <Link
@@ -323,10 +403,18 @@ export default function Footer() {
               </Link>
             </div>
           </div>
+          
+          {/* Service Areas */}
           <p className="text-center text-[#8cb3d9] text-xs mt-4 font-secondary">
-            Located in Nashik | Serving Ambad MIDC, Satpur MIDC, Sinnar MIDC,
-            Pune MIDC, Chakan MIDC
+            Serving all MIDC areas: Nashik (Ambad, Satpur, Sinnar) | Mumbai (Andheri, MIDC) | Pune (Chakan, Ranjangaon, Pimpri-Chinchwad) | Nagpur (Butibori, Hingna)
           </p>
+          
+          {/* Contact Summary */}
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-3 text-xs text-[#b3cce6]">
+            <span>📞 Primary: +91 90960 99960</span>
+            <span>📞 Alternate: +91 98223 72070</span>
+            <span>✉️ info@bhumiindustrial.com</span>
+          </div>
         </div>
       </div>
     </footer>

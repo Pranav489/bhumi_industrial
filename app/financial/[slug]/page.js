@@ -18,6 +18,8 @@ import {
   Briefcase,
   Target,
   Award,
+  Mail,
+  MapPin,
 } from "lucide-react";
 import {
   siteSEO,
@@ -185,7 +187,386 @@ const serviceContent = {
       },
     ],
   },
-  // ... other services would continue here with similar structure
+  "cash-credit-working-capital": {
+    intro:
+      "Expert working capital finance solutions for industrial units in Nashik. We help you secure cash credit limits, overdrafts, and bill discounting facilities tailored to your business needs.",
+    features: [
+      "Working Capital Assessment",
+      "CC/OD Limit Arrangement",
+      "CMA Data Preparation",
+      "Bank Negotiation",
+      "Limit Enhancement",
+      "Renewal Support",
+    ],
+    benefits: [
+      {
+        title: "Optimized Limits",
+        desc: "We help you secure working capital limits aligned with your actual business cycle.",
+      },
+      {
+        title: "Lower Interest",
+        desc: "Negotiate better interest rates and processing fees with multiple banks.",
+      },
+      {
+        title: "Smooth Renewals",
+        desc: "Timely renewals and limit enhancements without operational disruption.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is cash credit limit for industrial units?",
+        answer:
+          "Cash Credit (CC) is a working capital facility where you can withdraw up to the sanctioned limit based on your inventory and receivables. Interest is charged only on the amount utilized.",
+      },
+      {
+        question: "How is working capital requirement calculated?",
+        answer:
+          "Working capital is calculated using the operating cycle method or turnover method. We prepare CMA data that accurately reflects your business cycle to optimize the sanctioned limit.",
+      },
+    ],
+  },
+  "cost-reduction-techniques": {
+    intro:
+      "Strategic cost reduction consulting for industrial units in Nashik. We identify operational inefficiencies and implement proven cost optimization techniques.",
+    features: [
+      "Cost Audit",
+      "Operational Efficiency Analysis",
+      "Procurement Optimization",
+      "Energy Cost Reduction",
+      "Waste Minimization",
+      "Process Improvement",
+    ],
+    benefits: [
+      {
+        title: "Immediate Savings",
+        desc: "Identify quick-win opportunities for immediate cost reduction.",
+      },
+      {
+        title: "Sustainable Impact",
+        desc: "Long-term cost optimization strategies for lasting benefits.",
+      },
+      {
+        title: "ROI Focused",
+        desc: "Every recommendation backed by clear ROI calculations.",
+      },
+    ],
+    faqs: [
+      {
+        question: "How much cost reduction can be achieved?",
+        answer:
+          "Typically, we help clients achieve 10-15% reduction in operational costs within the first year through process optimization, better procurement, and energy efficiency measures.",
+      },
+      {
+        question: "What industries benefit most from cost reduction?",
+        answer:
+          "All manufacturing industries benefit from cost reduction, especially those in competitive sectors like automotive components, engineering, plastics, and food processing.",
+      },
+    ],
+  },
+  "start-up-project": {
+    intro:
+      "Comprehensive financial support for new start-up projects in Nashik. From business planning to funding, we guide new entrepreneurs through every step.",
+    features: [
+      "Business Plan Development",
+      "Financial Projections",
+      "Funding Strategy",
+      "Investor Pitch Deck",
+      "Government Scheme Advisory",
+      "Seed Funding Support",
+    ],
+    benefits: [
+      {
+        title: "Complete Guidance",
+        desc: "End-to-end support from ideation to funding for new entrepreneurs.",
+      },
+      {
+        title: "Investor Ready",
+        desc: "Professional pitch decks and business plans that attract investors.",
+      },
+      {
+        title: "Government Support",
+        desc: "Guidance on seed funding schemes, subsidies, and grants for startups.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What financial support is available for startups in Nashik?",
+        answer:
+          "Startups can access seed funding schemes, MSME subsidies, bank loans under CGTMSE, and government grants. We guide you through all available options and help with applications.",
+      },
+      {
+        question: "How do I get funding for my startup idea?",
+        answer:
+          "We help you prepare a comprehensive business plan, financial projections, and investor pitch deck. We then connect you with appropriate funding sources - banks, NBFCs, or angel investors based on your requirements.",
+      },
+    ],
+  },
+  "balance-sheet-analysis": {
+    intro:
+      "Expert balance sheet analysis for industrial units in Nashik. We provide detailed financial health assessment, ratio analysis, and actionable insights for better financial management.",
+    features: [
+      "Financial Statement Analysis",
+      "Ratio Analysis",
+      "Working Capital Assessment",
+      "Profitability Analysis",
+      "Cash Flow Analysis",
+      "Recommendation Report",
+    ],
+    benefits: [
+      {
+        title: "Clear Insights",
+        desc: "Understand your financial health with clear, actionable insights.",
+      },
+      {
+        title: "Bank-Ready Reports",
+        desc: "Comprehensive analysis reports that banks trust for loan assessments.",
+      },
+      {
+        title: "Improvement Roadmap",
+        desc: "Specific recommendations to improve financial metrics and bankability.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Why is balance sheet analysis important for businesses?",
+        answer:
+          "Balance sheet analysis reveals your business's financial health, identifies strengths and weaknesses, helps in loan applications, and guides strategic decisions for growth.",
+      },
+      {
+        question: "What ratios are analyzed in balance sheet analysis?",
+        answer:
+          "We analyze liquidity ratios, profitability ratios, efficiency ratios, solvency ratios, and working capital metrics to provide a comprehensive view of your financial position.",
+      },
+    ],
+  },
+  "subsidy-compliance": {
+    intro:
+      "Expert subsidy compliance services for industrial units in Nashik. We help you claim and maintain compliance for Maharashtra industrial subsidies and government schemes.",
+    features: [
+      "Subsidy Eligibility Assessment",
+      "Application Filing",
+      "Documentation Support",
+      "Compliance Monitoring",
+      "Renewal Assistance",
+      "Audit Support",
+    ],
+    benefits: [
+      {
+        title: "Maximum Benefits",
+        desc: "Identify and claim all eligible subsidies for maximum benefit.",
+      },
+      {
+        title: "Hassle-Free Process",
+        desc: "We handle all paperwork and follow-ups with government departments.",
+      },
+      {
+        title: "Compliance Assurance",
+        desc: "Ensure ongoing compliance to retain claimed subsidies.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What industrial subsidies are available in Maharashtra?",
+        answer:
+          "Maharashtra offers PSI (Package Scheme of Incentives), capital subsidy, interest subsidy, electricity duty exemption, and stamp duty exemption for eligible industrial units in notified areas.",
+      },
+      {
+        question: "How do I claim MSME subsidies in Nashik?",
+        answer:
+          "We assess your eligibility, prepare the application with required documents, file with the concerned department, and follow up until approval. We also ensure ongoing compliance to retain benefits.",
+      },
+    ],
+  },
+  "due-diligence-merger-acquisition": {
+    intro:
+      "Comprehensive due diligence services for mergers and acquisitions in Nashik. We provide financial, operational, and legal assessment for informed business decisions.",
+    features: [
+      "Financial Due Diligence",
+      "Operational Assessment",
+      "Legal Compliance Check",
+      "Valuation Analysis",
+      "Risk Identification",
+      "Deal Advisory",
+    ],
+    benefits: [
+      {
+        title: "Risk Mitigation",
+        desc: "Identify potential risks and hidden liabilities before the deal.",
+      },
+      {
+        title: "Informed Decisions",
+        desc: "Comprehensive insights for confident decision-making.",
+      },
+      {
+        title: "Better Valuation",
+        desc: "Accurate valuation based on thorough financial and operational analysis.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What is included in financial due diligence for M&A?",
+        answer:
+          "Financial due diligence includes analysis of historical financials, quality of earnings, working capital assessment, debt analysis, tax compliance, and identification of potential liabilities.",
+      },
+      {
+        question: "Why is due diligence important before acquisition?",
+        answer:
+          "Due diligence uncovers hidden risks, validates financial projections, ensures compliance, and provides negotiating power for better deal terms.",
+      },
+    ],
+  },
+  "financial-projection-ratio-analysis": {
+    intro:
+      "Professional financial projection and ratio analysis services for industrial units in Nashik. We create bank-ready projections that demonstrate your business's growth potential.",
+    features: [
+      "5-Year Financial Projections",
+      "Profit & Loss Forecast",
+      "Balance Sheet Projections",
+      "Cash Flow Statements",
+      "Ratio Analysis",
+      "Sensitivity Analysis",
+    ],
+    benefits: [
+      {
+        title: "Bank-Ready Format",
+        desc: "Projections prepared in formats accepted by all major banks.",
+      },
+      {
+        title: "Realistic Assumptions",
+        desc: "Industry-benchmarked assumptions for credible projections.",
+      },
+      {
+        title: "Strategic Insights",
+        desc: "Understand future financial performance and key drivers.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Why do banks need financial projections?",
+        answer:
+          "Banks use financial projections to assess loan repayment capacity, understand business growth potential, and evaluate the viability of expansion projects.",
+      },
+      {
+        question: "What is included in financial projection reports?",
+        answer:
+          "Financial projection reports include projected P&L, balance sheet, cash flow statements, key ratio analysis, assumptions, and sensitivity analysis for 3-5 years.",
+      },
+    ],
+  },
+  licenses: {
+    intro:
+      "Complete license advisory and compliance services for industrial units in Nashik. We help you obtain and maintain all required business licenses and registrations.",
+    features: [
+      "Factory License",
+      "Pollution NOC",
+      "Fire NOC",
+      "GST Registration",
+      "Trade License",
+      "FSSAI License",
+    ],
+    benefits: [
+      {
+        title: "Complete Compliance",
+        desc: "Ensure all regulatory licenses are in place for smooth operations.",
+      },
+      {
+        title: "Hassle-Free Process",
+        desc: "We handle all applications, documentation, and follow-ups.",
+      },
+      {
+        title: "Timely Renewals",
+        desc: "Never miss a license renewal with our proactive tracking.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What licenses are required for a factory in Nashik MIDC?",
+        answer:
+          "Industrial units require factory license, pollution NOC, fire NOC, GST registration, and specific licenses based on industry type (FSSAI, drug license, etc.). We help with all required approvals.",
+      },
+      {
+        question: "How long does it take to get factory license in Nashik?",
+        answer:
+          "Factory license typically takes 15-30 days after complete document submission. We prepare and submit the complete application for faster processing.",
+      },
+    ],
+  },
+  "business-planning-support": {
+    intro:
+      "Expert business planning support for industrial entrepreneurs in Nashik. From business plan development to growth strategy, we help you plan for success.",
+    features: [
+      "Business Plan Development",
+      "Market Analysis",
+      "Operational Planning",
+      "Financial Planning",
+      "Growth Strategy",
+      "Investor Presentations",
+    ],
+    benefits: [
+      {
+        title: "Clear Roadmap",
+        desc: "A detailed business plan that guides your growth journey.",
+      },
+      {
+        title: "Investor Ready",
+        desc: "Professional business plans that attract investors and lenders.",
+      },
+      {
+        title: "Strategic Focus",
+        desc: "Align your operations and finances with clear strategic goals.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What should a good business plan include?",
+        answer:
+          "A comprehensive business plan includes executive summary, company overview, market analysis, operational plan, marketing strategy, financial projections, and growth roadmap.",
+      },
+      {
+        question: "How can business planning help my existing industry?",
+        answer:
+          "Strategic business planning helps identify growth opportunities, optimize operations, prepare for expansion, and attract funding for new projects.",
+      },
+    ],
+  },
+  "documentation-compliance": {
+    intro:
+      "Complete documentation and compliance services for industrial units in Nashik. We ensure your business meets all statutory and regulatory requirements.",
+    features: [
+      "Statutory Compliance",
+      "ROC Filings",
+      "GST Compliance",
+      "Labor Law Compliance",
+      "Document Management",
+      "Audit Support",
+    ],
+    benefits: [
+      {
+        title: "Worry-Free Compliance",
+        desc: "Never miss a compliance deadline with our proactive tracking.",
+      },
+      {
+        title: "Complete Documentation",
+        desc: "Well-organized documentation ready for inspections and audits.",
+      },
+      {
+        title: "Penalty Protection",
+        desc: "Avoid penalties and legal issues with timely compliance.",
+      },
+    ],
+    faqs: [
+      {
+        question: "What statutory compliances apply to industrial units?",
+        answer:
+          "Industrial units must comply with Companies Act, GST, labor laws, factory act, pollution norms, and industry-specific regulations. We help manage all compliances.",
+      },
+      {
+        question: "How can I ensure my business is compliant?",
+        answer:
+          "We conduct a compliance audit, identify gaps, and implement systems for ongoing compliance across all regulatory requirements.",
+      },
+    ],
+  },
 };
 
 const defaultContent = {
@@ -217,12 +598,12 @@ const defaultContent = {
     {
       question: "Why choose Bhumi Industrial Consultant?",
       answer:
-        "With 26+ years of experience, FI-ACC accreditation, and 1000+ successful projects, Milind Rajhans personally handles each case for the best outcome.",
+        "With 26+ years of experience, FI-ACC accreditation, and 1000+ successful projects, Milind Rajhans personally handles each case for the best outcome. Call us at +91 90960 99960 or +91 98223 72070 for a free consultation.",
     },
     {
       question: "Is the first consultation free?",
       answer:
-        "Yes, the first consultation is completely free. Call +91 9822242170 or visit our office at Tulips Apartment, College Road, Nashik.",
+        "Yes, the first consultation is completely free. Call +91 90960 99960 or +91 98223 72070, or visit our office at Flat-B2, Parshuram Apartment, College Road, Nashik.",
     },
   ],
 };
@@ -323,7 +704,7 @@ export default async function FinancialServicePage({ params }) {
 
             {/* Category Badge */}
             <span className="inline-block px-4 py-2 bg-[#f97316]/20 text-[#fb923c] rounded-full text-sm font-semibold mb-4">
-              Financial Service · Nashik
+              Financial Service · Maharashtra
             </span>
 
             {/* Title and Description */}
@@ -333,7 +714,7 @@ export default async function FinancialServicePage({ params }) {
               </h1>
               <p className="text-xl text-[#d9e6f2] mb-8">{content.intro}</p>
 
-              {/* CTA Buttons */}
+              {/* CTA Buttons - UPDATED with correct phone numbers */}
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/contact"
@@ -342,13 +723,38 @@ export default async function FinancialServicePage({ params }) {
                   Get Free Consultation
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                <div className="flex flex-wrap gap-2">
+                  <a
+                    href="tel:+919096099960"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold transition-colors border border-white/20"
+                  >
+                    <Phone className="w-5 h-5" />
+                    +91 90960 99960
+                  </a>
+                  <a
+                    href="tel:+919822372070"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold transition-colors border border-white/20"
+                  >
+                    <Phone className="w-5 h-5" />
+                    +91 98223 72070
+                  </a>
+                </div>
+              </div>
+
+              {/* Contact Info Strip */}
+              <div className="flex flex-wrap items-center gap-4 mt-6 pt-4 border-t border-white/20">
                 <a
-                  href="tel:+919822242170"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold transition-colors border border-white/20"
+                  href="mailto:info@bhumiindustrial.com"
+                  className="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
                 >
-                  <Phone className="w-5 h-5" />
-                  +91 9822242170
+                  <Mail className="w-4 h-4" />
+                  info@bhumiindustrial.com
                 </a>
+                <span className="text-white/30">|</span>
+                <span className="flex items-center gap-2 text-sm text-white/70">
+                  <MapPin className="w-4 h-4" />
+                  Nashik | Mumbai | Pune | Nagpur
+                </span>
               </div>
             </div>
           </div>
@@ -418,8 +824,7 @@ export default async function FinancialServicePage({ params }) {
                 </div>
               </div>
 
-              {/* Right Column - Sidebar */}
-              {/* Right Column - Sidebar */}
+              {/* Right Column - Sidebar - UPDATED with correct contact numbers */}
               <div className="lg:col-span-1">
                 {/* Founder Card - Sticky with proper spacing */}
                 <div className="sticky top-24 space-y-6">
@@ -442,19 +847,28 @@ export default async function FinancialServicePage({ params }) {
                       the best outcome.
                     </p>
 
-                    {/* Contact Options */}
+                    {/* Contact Options - UPDATED */}
                     <div className="space-y-3">
                       <a
-                        href="tel:+919822242170"
+                        href="tel:+919096099960"
                         className="flex items-center gap-3 p-4 bg-[#f97316] rounded-xl hover:bg-[#ea580c] transition-colors font-bold group"
                       >
                         <Phone className="w-5 h-5" />
-                        Call Now: +91 9822242170
+                        Primary: +91 90960 99960
                         <ArrowRight className="w-4 h-4 ml-auto group-hover:translate-x-1 transition-transform" />
                       </a>
 
                       <a
-                        href={`https://wa.me/919822242170?text=Hi%20Milind%20sir%2C%20I%20need%20help%20with%20${encodeURIComponent(seoData.breadcrumb)}`}
+                        href="tel:+919822372070"
+                        className="flex items-center gap-3 p-4 bg-[#f97316]/80 rounded-xl hover:bg-[#ea580c] transition-colors font-bold group"
+                      >
+                        <Phone className="w-5 h-5" />
+                        Alternate: +91 98223 72070
+                        <ArrowRight className="w-4 h-4 ml-auto group-hover:translate-x-1 transition-transform" />
+                      </a>
+
+                      <a
+                        href={`https://wa.me/919096099960?text=Hi%20Milind%20sir%2C%20I%20need%20help%20with%20${encodeURIComponent(seoData.breadcrumb)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-3 p-4 bg-[#25D366] rounded-xl hover:bg-[#20ba57] transition-colors font-bold group"
@@ -472,6 +886,17 @@ export default async function FinancialServicePage({ params }) {
                         Send Enquiry
                         <ArrowRight className="w-4 h-4 ml-auto group-hover:translate-x-1 transition-transform" />
                       </Link>
+                    </div>
+
+                    {/* Email Contact */}
+                    <div className="mt-4 pt-4 border-t border-white/20">
+                      <a
+                        href="mailto:info@bhumiindustrial.com"
+                        className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm"
+                      >
+                        <Mail className="w-4 h-4" />
+                        info@bhumiindustrial.com
+                      </a>
                     </div>
                   </div>
 
@@ -542,7 +967,7 @@ export default async function FinancialServicePage({ params }) {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* FAQ Section - UPDATED with correct contact numbers */}
         <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-4">
@@ -569,10 +994,36 @@ export default async function FinancialServicePage({ params }) {
                 </div>
               ))}
             </div>
+
+            {/* Still Have Questions? */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-[#f97316]/10 to-[#fff7ed] rounded-2xl text-center">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">
+                Still have questions?
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Call us directly for personalized assistance
+              </p>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <a
+                  href="tel:+919096099960"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#f97316] text-white rounded-lg font-medium hover:bg-[#ea580c] transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  +91 90960 99960
+                </a>
+                <a
+                  href="tel:+919822372070"
+                  className="inline-flex items-center gap-2 px-4 py-2 border border-[#f97316] text-[#f97316] rounded-lg font-medium hover:bg-[#f97316] hover:text-white transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  +91 98223 72070
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section - UPDATED with correct contact numbers */}
         <section className="py-20 bg-gradient-to-br from-[#001a33] via-[#002952] to-[#003d66] text-white">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -590,14 +1041,26 @@ export default async function FinancialServicePage({ params }) {
                 Get Free Consultation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <a
-                href="tel:+919822242170"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold text-lg transition-colors border border-white/20"
-              >
-                <Phone className="w-5 h-5" />
-                Call Us Now
-              </a>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="tel:+919096099960"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold text-lg transition-colors border border-white/20"
+                >
+                  <Phone className="w-5 h-5" />
+                  +91 90960 99960
+                </a>
+                <a
+                  href="tel:+919822372070"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold text-lg transition-colors border border-white/20"
+                >
+                  <Phone className="w-5 h-5" />
+                  +91 98223 72070
+                </a>
+              </div>
             </div>
+            <p className="text-white/60 text-sm mt-6">
+              Offices in Nashik, Mumbai, Pune & Nagpur | Response within 2 hours
+            </p>
           </div>
         </section>
 

@@ -108,7 +108,7 @@ const serviceContent = {
       {
         question: "What is the cost of industrial project planning services?",
         answer:
-          "Project planning fees depend on project scale. We offer a free initial consultation to assess requirements and provide a customized quote. Call +91 9822242170 to discuss your project.",
+          "Project planning fees depend on project scale. We offer a free initial consultation to assess requirements and provide a customized quote. Call +91 90960 99960 or +91 98223 72070 to discuss your project.",
       },
     ],
   },
@@ -531,12 +531,12 @@ const defaultContent = {
     {
       question: "Why choose Bhumi Industrial Consultant for MIDC work?",
       answer:
-        "With 26+ years of experience, FI-ACC accreditation, and 1000+ successful projects, Milind Rajhans personally handles each case for the best outcome with minimum hassle.",
+        "With 26+ years of experience, FI-ACC accreditation, and 1000+ successful projects, Milind Rajhans personally handles each case for the best outcome with minimum hassle. Call us at +91 90960 99960 or +91 98223 72070 for a free consultation.",
     },
     {
       question: "Is the first consultation free?",
       answer:
-        "Yes, the first consultation is completely free. Call +91 9822242170 or visit our office at Tulips Apartment, College Road, Nashik to discuss your MIDC requirements.",
+        "Yes, the first consultation is completely free. Call +91 90960 99960 or +91 98223 72070, or visit our office at Flat-B2, Parshuram Apartment, College Road, Nashik to discuss your MIDC requirements.",
     },
   ],
 };
@@ -647,7 +647,7 @@ export default async function IndustrialServicePage({ params }) {
               </h1>
               <p className="text-xl text-[#d9e6f2] mb-8">{content.intro}</p>
 
-              {/* CTA Buttons */}
+              {/* CTA Buttons - UPDATED with correct phone numbers */}
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/contact"
@@ -656,13 +656,22 @@ export default async function IndustrialServicePage({ params }) {
                   Get Free Consultation
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <a
-                  href="tel:+919822242170"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold transition-colors border border-white/20"
-                >
-                  <Phone className="w-5 h-5" />
-                  +91 9822242170
-                </a>
+                <div className="flex gap-2">
+                  <a
+                    href="tel:+919096099960"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold transition-colors border border-white/20"
+                  >
+                    <Phone className="w-5 h-5" />
+                    +91 90960 99960
+                  </a>
+                  <a
+                    href="tel:+919822372070"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold transition-colors border border-white/20"
+                  >
+                    <Phone className="w-5 h-5" />
+                    +91 98223 72070
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -732,7 +741,7 @@ export default async function IndustrialServicePage({ params }) {
                 </div>
               </div>
 
-              {/* Right Column - Sidebar (Fixed Sticky) */}
+              {/* Right Column - Sidebar (Fixed Sticky) - UPDATED with correct contact numbers */}
               <div className="lg:col-span-1">
                 <div className="sticky top-24 space-y-6">
                   {/* Founder Card */}
@@ -754,19 +763,28 @@ export default async function IndustrialServicePage({ params }) {
                       the best outcome with MIDC Nashik.
                     </p>
 
-                    {/* Contact Options */}
+                    {/* Contact Options - UPDATED */}
                     <div className="space-y-3">
                       <a
-                        href="tel:+919822242170"
+                        href="tel:+919096099960"
                         className="flex items-center gap-3 p-4 bg-[#f97316] rounded-xl hover:bg-[#ea580c] transition-colors font-bold group"
                       >
                         <Phone className="w-5 h-5" />
-                        Call Now: +91 9822242170
+                        Primary: +91 90960 99960
                         <ArrowRight className="w-4 h-4 ml-auto group-hover:translate-x-1 transition-transform" />
                       </a>
 
                       <a
-                        href={`https://wa.me/919822242170?text=Hi%20Milind%20sir%2C%20I%20need%20help%20with%20${encodeURIComponent(seoData.breadcrumb)}`}
+                        href="tel:+919822372070"
+                        className="flex items-center gap-3 p-4 bg-[#f97316]/80 rounded-xl hover:bg-[#ea580c] transition-colors font-bold group"
+                      >
+                        <Phone className="w-5 h-5" />
+                        Alternate: +91 98223 72070
+                        <ArrowRight className="w-4 h-4 ml-auto group-hover:translate-x-1 transition-transform" />
+                      </a>
+
+                      <a
+                        href={`https://wa.me/919096099960?text=Hi%20Milind%20sir%2C%20I%20need%20help%20with%20${encodeURIComponent(seoData.breadcrumb)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-3 p-4 bg-[#25D366] rounded-xl hover:bg-[#20ba57] transition-colors font-bold group"
@@ -785,6 +803,40 @@ export default async function IndustrialServicePage({ params }) {
                         <ArrowRight className="w-4 h-4 ml-auto group-hover:translate-x-1 transition-transform" />
                       </Link>
                     </div>
+                  </div>
+
+                  {/* Contact Info Card */}
+                  <div className="bg-white border border-[#ffedd5] p-6 rounded-2xl">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                      <Phone className="w-5 h-5 text-[#f97316]" />
+                      24/7 Support
+                    </h3>
+                    <div className="space-y-2 mb-4">
+                      <a
+                        href="tel:+919096099960"
+                        className="flex items-center gap-2 text-gray-600 hover:text-[#f97316] transition-colors"
+                      >
+                        <Phone className="w-4 h-4" />
+                        <span className="font-medium">+91 90960 99960</span>
+                      </a>
+                      <a
+                        href="tel:+919822372070"
+                        className="flex items-center gap-2 text-gray-600 hover:text-[#f97316] transition-colors"
+                      >
+                        <Phone className="w-4 h-4" />
+                        <span className="font-medium">+91 98223 72070</span>
+                      </a>
+                      <a
+                        href="mailto:info@bhumiindustrial.com"
+                        className="flex items-center gap-2 text-gray-600 hover:text-[#f97316] transition-colors"
+                      >
+                        <MessageCircle className="w-4 h-4" />
+                        <span className="font-medium break-all">info@bhumiindustrial.com</span>
+                      </a>
+                    </div>
+                    <p className="text-xs text-gray-500">
+                      ⏱️ Response within 2 hours | Offices in Nashik, Mumbai, Pune & Nagpur
+                    </p>
                   </div>
 
                   {/* Related Services */}
@@ -855,7 +907,7 @@ export default async function IndustrialServicePage({ params }) {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* FAQ Section - UPDATED with correct contact numbers */}
         <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-4">
@@ -882,10 +934,36 @@ export default async function IndustrialServicePage({ params }) {
                 </div>
               ))}
             </div>
+
+            {/* Still Have Questions? */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-[#f97316]/10 to-[#fff7ed] rounded-2xl text-center">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">
+                Still have questions?
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Call us directly for personalized assistance
+              </p>
+              <div className="flex flex-wrap gap-3 justify-center">
+                <a
+                  href="tel:+919096099960"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#f97316] text-white rounded-lg font-medium hover:bg-[#ea580c] transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  +91 90960 99960
+                </a>
+                <a
+                  href="tel:+919822372070"
+                  className="inline-flex items-center gap-2 px-4 py-2 border border-[#f97316] text-[#f97316] rounded-lg font-medium hover:bg-[#f97316] hover:text-white transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  +91 98223 72070
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section - UPDATED with correct contact numbers */}
         <section className="py-20 bg-gradient-to-br from-[#001a33] via-[#002952] to-[#003d66] text-white">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -903,14 +981,26 @@ export default async function IndustrialServicePage({ params }) {
                 Get Free Consultation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <a
-                href="tel:+919822242170"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold text-lg transition-colors border border-white/20"
-              >
-                <Phone className="w-5 h-5" />
-                Call Us Now
-              </a>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="tel:+919096099960"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold text-lg transition-colors border border-white/20"
+                >
+                  <Phone className="w-5 h-5" />
+                  +91 90960 99960
+                </a>
+                <a
+                  href="tel:+919822372070"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold text-lg transition-colors border border-white/20"
+                >
+                  <Phone className="w-5 h-5" />
+                  +91 98223 72070
+                </a>
+              </div>
             </div>
+            <p className="text-white/60 text-sm mt-6">
+              Offices in Nashik, Mumbai, Pune & Nagpur | Response within 2 hours
+            </p>
           </div>
         </section>
 

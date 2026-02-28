@@ -23,6 +23,9 @@ import {
   IndianRupee,
   Percent,
   Building,
+  MessageCircle,
+  Mail,
+  MapPin,
 } from "lucide-react";
 import {
   buildMetadata,
@@ -118,7 +121,7 @@ export default function FinancialPage() {
 
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 max-w-4xl leading-tight">
               Financial Services for Industries in{" "}
-              <span className="text-[#f97316]">Nashik</span>
+              <span className="text-[#f97316]">Maharashtra</span>
             </h1>
 
             <p className="text-xl text-[#d9e6f2] max-w-3xl mb-8">
@@ -142,6 +145,7 @@ export default function FinancialPage() {
               ))}
             </div>
 
+            {/* CTA Buttons - UPDATED with correct phone numbers */}
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/contact"
@@ -150,12 +154,36 @@ export default function FinancialPage() {
                 <Phone className="w-4 h-4" /> Free Consultation
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href="tel:+919096099960"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold transition-colors border border-white/20"
+                >
+                  <Phone className="w-4 h-4" /> +91 90960 99960
+                </a>
+                <a
+                  href="tel:+919822372070"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold transition-colors border border-white/20"
+                >
+                  <Phone className="w-4 h-4" /> +91 98223 72070
+                </a>
+              </div>
+            </div>
+
+            {/* Contact Info Strip */}
+            <div className="flex flex-wrap items-center gap-4 mt-6 pt-4 border-t border-white/20">
               <a
-                href="tel:+919822242170"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold transition-colors border border-white/20"
+                href="mailto:info@bhumiindustrial.com"
+                className="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
               >
-                <Phone className="w-4 h-4" /> +91 9822242170
+                <Mail className="w-4 h-4" />
+                info@bhumiindustrial.com
               </a>
+              <span className="text-white/30">|</span>
+              <span className="flex items-center gap-2 text-sm text-white/70">
+                <MapPin className="w-4 h-4" />
+                Nashik | Mumbai | Pune | Nagpur
+              </span>
             </div>
           </div>
         </section>
@@ -212,7 +240,7 @@ export default function FinancialPage() {
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Comprehensive financial consulting services for industrial units
-                in Nashik, Ambad MIDC, Satpur MIDC, and Pune
+                across Maharashtra's major industrial areas
               </p>
             </div>
 
@@ -253,7 +281,7 @@ export default function FinancialPage() {
                   Why Bhumi Financial
                 </span>
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                  Your Trusted Financial Partner Since 1997
+                  Your Trusted Financial Partner Since 1999
                 </h2>
                 <div className="space-y-4">
                   {highlights.map((item, i) => (
@@ -265,6 +293,40 @@ export default function FinancialPage() {
                       <span className="text-gray-700">{item}</span>
                     </div>
                   ))}
+                </div>
+
+                {/* Contact Numbers - UPDATED */}
+                <div className="mt-8 p-4 bg-white rounded-xl shadow-sm">
+                  <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <Phone className="w-4 h-4 text-[#f97316]" />
+                    Get Expert Financial Advice
+                  </h3>
+                  <div className="space-y-2">
+                    <a
+                      href="tel:+919096099960"
+                      className="flex items-center gap-3 text-gray-600 hover:text-[#f97316] transition-colors group"
+                    >
+                      <span className="w-8 h-8 bg-[#f97316]/10 rounded-lg flex items-center justify-center group-hover:bg-[#f97316] group-hover:text-white transition-colors">
+                        <Phone className="w-4 h-4" />
+                      </span>
+                      <span className="font-medium">+91 90960 99960</span>
+                      <span className="text-xs bg-[#f97316]/10 text-[#f97316] px-2 py-1 rounded-full ml-auto">
+                        Primary
+                      </span>
+                    </a>
+                    <a
+                      href="tel:+919822372070"
+                      className="flex items-center gap-3 text-gray-600 hover:text-[#f97316] transition-colors group"
+                    >
+                      <span className="w-8 h-8 bg-[#f97316]/10 rounded-lg flex items-center justify-center group-hover:bg-[#f97316] group-hover:text-white transition-colors">
+                        <Phone className="w-4 h-4" />
+                      </span>
+                      <span className="font-medium">+91 98223 72070</span>
+                      <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full ml-auto">
+                        Alternate
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -321,6 +383,17 @@ export default function FinancialPage() {
                     </Link>
                   ))}
                 </div>
+
+                {/* WhatsApp Button */}
+                <a
+                  href={`https://wa.me/919096099960?text=Hi%20I%20need%20financial%20consulting%20for%20my%20business`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 flex items-center justify-center gap-2 p-3 bg-[#25D366] rounded-xl hover:bg-[#20ba57] transition-colors font-semibold"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Chat on WhatsApp
+                </a>
               </div>
             </div>
           </div>
@@ -348,6 +421,38 @@ export default function FinancialPage() {
           </div>
         </section>
 
+        {/* Contact Information Bar */}
+        <section className="bg-gradient-to-r from-[#f97316]/10 to-[#fff7ed] py-6 border-y border-[#ffedd5]">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap items-center justify-center gap-6">
+              <span className="text-sm font-semibold text-gray-700">Get in touch:</span>
+              <a
+                href="tel:+919096099960"
+                className="flex items-center gap-2 text-[#f97316] hover:text-[#ea580c] transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                <span className="font-bold">+91 90960 99960</span>
+              </a>
+              <span className="text-gray-300">|</span>
+              <a
+                href="tel:+919822372070"
+                className="flex items-center gap-2 text-[#f97316] hover:text-[#ea580c] transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                <span className="font-bold">+91 98223 72070</span>
+              </a>
+              <span className="text-gray-300">|</span>
+              <a
+                href="mailto:info@bhumiindustrial.com"
+                className="flex items-center gap-2 text-[#f97316] hover:text-[#ea580c] transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                info@bhumiindustrial.com
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* ── CTA ──────────────────────────────────────────── */}
         <section className="py-20 bg-gradient-to-r from-[#f97316] to-[#ea580c]">
           <div className="max-w-[1440px] mx-auto px-4 text-center">
@@ -359,13 +464,21 @@ export default function FinancialPage() {
               the right financial solution for your business.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a
-                href="tel:+919822242170"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#ea580c] rounded-xl font-bold hover:bg-[#fff7ed] transition-colors shadow-xl group"
-              >
-                <Phone className="w-5 h-5" /> +91 9822242170
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="tel:+919096099960"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#ea580c] rounded-xl font-bold hover:bg-[#fff7ed] transition-colors shadow-xl group"
+                >
+                  <Phone className="w-5 h-5" /> +91 90960 99960
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a
+                  href="tel:+919822372070"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/20 text-white rounded-xl font-bold hover:bg-white/30 transition-colors border border-white/50"
+                >
+                  <Phone className="w-5 h-5" /> +91 98223 72070
+                </a>
+              </div>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white rounded-xl font-bold hover:bg-white/10 transition-colors"
@@ -373,6 +486,9 @@ export default function FinancialPage() {
                 Send Enquiry <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
+            <p className="text-white/70 text-sm mt-6">
+              Response within 2 hours | Offices in Nashik, Mumbai, Pune & Nagpur
+            </p>
           </div>
         </section>
       </main>
